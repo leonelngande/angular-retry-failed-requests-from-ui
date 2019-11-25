@@ -18,7 +18,7 @@ import {ITodo} from './models/todo.interface';
         <!-- Posts start -->
         <div class="col-md-6">
 
-          <h4 class="text-center">POSTS</h4>
+          <h4 class="text-center">POSTS <button class="btn btn-link" (click)="fetchPosts()">Reload</button></h4>
 
           <ul class="list-group" *ngIf="posts$ | async; let posts">
             <li class="list-group-item" *ngFor="let post of posts">{{post.title}}</li>
@@ -37,7 +37,7 @@ import {ITodo} from './models/todo.interface';
         <!-- Todos start -->
         <div class="col-md-6">
 
-          <h4 class="text-center">TODOS</h4>
+          <h4 class="text-center">TODOS <button class="btn btn-link" (click)="fetchTodos()">Reload</button></h4>
 
           <ul class="list-group" *ngIf="todos$ | async; let todos">
             <li class="list-group-item" *ngFor="let todo of todos">{{todo.title}}</li>
